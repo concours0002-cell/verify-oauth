@@ -9,4 +9,4 @@ COPY . .
 
 ENV PYTHONUNBUFFERED=1
 
-CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "discord_oauth_server:app"]
+CMD sh -c "gunicorn --bind 0.0.0.0:$PORT discord_oauth_server:app"
